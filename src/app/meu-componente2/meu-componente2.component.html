@@ -1,2 +1,18 @@
-<p>{{nome}}</p>
-<p>{{aluno?.dados?.nome}}</p>
+<div *ngIf = "isVisible else condicaoFalsa">
+    <p>{{nome}}</p>
+    <p>{{aluno?.dados?.nome}}</p>
+</div>
+<ng-template #condicaoFalsa>
+    <p>Condição falsa</p>
+</ng-template>
+
+<div [ngSwitch]="myValue">
+    <span *ngSwitchCase="1">Valor 1</span>
+    <span *ngSwitchCase="2">Valor 2</span>
+    <span *ngSwitchCase="3">Valor 3</span>
+    <span *ngSwitchCase="">Valor 4</span>    
+</div>
+<ul>
+    <li *ngFor="let item of myList">Item {{item}}</li>
+</ul>
+

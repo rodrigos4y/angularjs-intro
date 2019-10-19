@@ -7,7 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MeuComponente2Component implements OnInit {
 
-  nome:string = "rodrigo";
+  nome:string = "Rodrigo";
+  myValue = 3;
+  myList = [1, 2, 3, 4];
+  isVisible:boolean = true;
+
+  aluno = {
+    dados: {
+      nome: 'Freitas'
+    }
+  }
 
   constructor() { }
 
